@@ -1,42 +1,22 @@
 package com.maic.timeline.timeline.model;
 
-import com.orm.dsl.Table;
-import com.orm.dsl.Unique;
+import com.orm.SugarRecord;
 
 import java.util.Date;
 
 /**
  * Created by MarlinL on 8/28/16.
  */
-@Table
-public class Plan {
+public class Plan extends SugarRecord {
 
-    @Unique
-    private Integer id;
-    private String planName;
-    private Date alretDate;
+    public String planName;
+    public Date alret;
 
-    public Integer getId() {
-        return id;
+    public Plan() {
     }
 
-    public String getPlanName() {
-        return planName;
-    }
-
-    public Date getAlretDate() {
-        return alretDate;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public void setPlanName(String planName) {
+    public Plan(String planName, Date alret) {
         this.planName = planName;
-    }
-
-    public void setAlretDate(Date alretDate) {
-        this.alretDate = alretDate;
+        this.alret = alret;
     }
 }

@@ -1,7 +1,6 @@
 package com.maic.timeline.timeline.model;
 
 import com.orm.dsl.Table;
-import com.orm.dsl.Unique;
 
 import java.util.Date;
 
@@ -11,14 +10,13 @@ import java.util.Date;
 @Table
 public class Record {
 
-    @Unique
-    private Integer id;
+    private Long id;
     private Integer planId;
     private Integer status;
     private Date updateAt;
     private Date createAt;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
@@ -38,7 +36,7 @@ public class Record {
         return createAt;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -55,6 +53,14 @@ public class Record {
     }
 
     public void setCreateAt(Date createAt) {
+        this.createAt = createAt;
+    }
+
+    public Record(Long id, Integer planId, Integer status, Date updateAt, Date createAt) {
+        this.id = id;
+        this.planId = planId;
+        this.status = status;
+        this.updateAt = updateAt;
         this.createAt = createAt;
     }
 }
