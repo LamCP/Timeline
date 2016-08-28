@@ -1,10 +1,37 @@
 package com.maic.timeline.timeline.model;
 
+import java.util.Date;
+
 /**
  * Created by MarlinL on 8/28/16.
  */
 public class Plan {
 
     private Integer id;
-    private 
+    private String planName;
+    private Date alretDate;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getPlanName() {
+        return planName;
+    }
+
+    public Date getAlretDate() {
+        return alretDate;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setPlanName(String planName) {
+        this.planName = planName;
+    }
+
+    public void setAlretDate(Date alretDate) {
+        this.alretDate = alretDate;
+    }
 }
