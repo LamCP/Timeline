@@ -28,6 +28,6 @@ public class MainActivity extends AppCompatActivity {
         while (planIterator.hasNext()){
 
         }
-        
+
     }
 }
